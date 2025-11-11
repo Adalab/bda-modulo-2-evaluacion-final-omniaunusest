@@ -42,7 +42,8 @@ Este proyecto ha sido desarrollado por **[Ona Zaragoza Fernández](https://www.l
 
 GitHub: [@omniaunusest](https://github.com/omniaunusest)
 
-## SQL: Queries within an Educational Project Framework
+#
+# SQL: Queries within an Educational Project Framework
 Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web and Database Information Extraction*), full-time program by *Adalab*.
 
 ## Index
