@@ -194,7 +194,6 @@ SELECT DISTINCT f.title AS 'film', DATEDIFF(r.return_date, r.rental_date) AS 'da
 			/* ---- elegimos DISTINCT para no obtener resultados repetidos para una misma película,
 					sino -a criterio personal- evitar la reiteración de la duración de los alquileres*/
 
-
 /* 23. Encuentra el nombre y apellido de los actores que no han actuado en ninguna película de la categoría
 "Horror". Utiliza una subconsulta para encontrar los actores que han actuado en películas de la
 categoría "Horror" y luego exclúyelos de la lista de actores. */
@@ -204,7 +203,9 @@ categoría "Horror" y luego exclúyelos de la lista de actores. */
 la tabla film. */
 
 
-
+			/*(((((( B O N U S )))))) 
+            
+25.Encuentra todos los actores que han actuado juntos en al menos una película. La consulta debe mostrar el nombre y apellido de los actores y el número de películas en las que han actuado juntos. */
 
 
 
