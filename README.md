@@ -1,6 +1,5 @@
 # SQL: consultas en el marco de un proyecto educativo
-
-    descripción, descripción, descripción
+                .
 
 ## Índice
 
@@ -13,7 +12,15 @@
 #### ➥ (See English version [below](#index))
 #
 ## 1. Propósito
-        .
+
+#### Practicar SQL con la base de datos Sakila y demostrar dominio respecto a uso de queries:
+
+- Queries básicas: *SELECT*; *UPDATE*; *DELETE*; *INSERT*.    
+- Funciones *GROUP BY*, *WHERE* y *HAVING*.  
+- *JOINS* (incluyendo *UNION* y *UNION ALL*)       
+- Subconsultas.         
+- Subconsultas correlacionadas.
+
 ## 2. Uso
         .
 
@@ -40,8 +47,15 @@
 [5. Database Schema](#5-database-schema)    
 [6. Authorship and Licenses](#6-authorship-and-licenses)    
 
-## 1. Objectives
-        .
+## 1. Project Goals
+#### Practice SQL using the Sakila database, demonstrating proficiency in:
+- Basic queries: *SELECT*, *UPDATE*, *DELETE*, *INSERT*.
+- *GROUP BY*, *WHERE*, and *HAVING* clauses.
+- Use of *JOINS* (including *UNION* and *UNION ALL*).
+- Subqueries.
+- Correlated subqueries.
+
+
 
 ## 2. Getting Started
         .
