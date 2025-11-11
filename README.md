@@ -21,8 +21,8 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
 - Subconsultas correlacionadas.
 
 ## 2. Uso
-1. Cargar base de datos *Sakila*.       
-*sakila_schema.sql*
+1. Descarga los scripts oficiales para cargar la base de datos Sakila:
+   - [sakila-schema.sql | sakila-data.sql | sakila.mwb](https://downloads.mysql.com/docs/sakila-db.zip)
 
 2. Ejecutar las consultas en MySQL Workbench o cualquier cliente SQL compatible.
 
@@ -30,7 +30,6 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
         bda-modulo-2-evaluacion-final-omniaunusest/
         ├── README.md
         ├── database-assets/
-                └── sakila_schema.sql
                 └── sakila_er_diagram.svg
 
 
@@ -63,14 +62,16 @@ Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web an
 - Correlated subqueries.
 
 ## 2. Getting Started
-1. Load the *Sakila* database.
+
+1. Download the official scripts to set up the Sakila database:
+   - [sakila-schema.sql | sakila-data.sql | sakila.mwb](https://downloads.mysql.com/docs/sakila-db.zip)
+
 2. Run the queries in MySQL Workbench or any compatible SQL client.
 
 ## 4. Repository Structure
         bda-modulo-2-evaluacion-final-omniaunusest/
         ├── README.md
         ├── database-assets/
-                └── sakila_schema.sql
                 └── sakila_er_diagram.svg
 
 ## 4. Sakila Database Entity-Relationship Diagram
