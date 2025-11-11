@@ -5,13 +5,13 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
 
 [1. Propósito](#1-propósito)    
 [2. Uso](#2-uso)    
-[3. Esquema de la base de datos](#3-esquema-de-la-base-de-datos)    
+[3. Diagrama Entidad-Relación de la base de datos Sakila](#3-diagrama-entidad-relación-de-la-base-de-datos-sakila)      
 [4. Autoría y licencias](#4-autoría-y-licencias)
 #### ➥ (see English version [below](#index))
 #
 ## 1. Propósito
 
-#### Practicar SQL con la base de datos Sakila y demostrar dominio en el uso de queries:
+#### Practicar con la base de datos Sakila, que simula un sistema de alquiler de películas, y demostrar dominio en el uso de SQL:
 
 - Queries básicas: *SELECT*; *UPDATE*; *DELETE*; *INSERT*.    
 - Funciones *GROUP BY*, *WHERE* y *HAVING*.  
@@ -20,10 +20,13 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
 - Subconsultas correlacionadas.
 
 ## 2. Uso
-        .
+1. Cargar base de datos *Sakila*.
 
-## 3. Esquema de la base de datos
-        .
+2. Ejecutar las consultas en MySQL Workbench o cualquier cliente SQL compatible.
+
+## 3. Diagrama Entidad-Relación de la base de datos Sakila
+
+![Diagrama EER de Sakila][def]
 
 ## 4. Autoría y licencias
         .
@@ -34,11 +37,12 @@ Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web an
 ## Index
 [1. Project Goals](#1-project-goals)  
 [2. Getting Started](#2-getting-started)     
-[3. Database Schema](#5-database-schema)    
-[4. Authorship and Licenses](#6-authorship-and-licenses)    
+[3. Sakila Database Entity-Relationship Diagram](#3-sakila-database-entity-relationship-diagram)    
+[4. Authorship and Licenses](#4-authorship-and-licenses)    
 
 ## 1. Project Goals
-#### Practice SQL using the Sakila database, demonstrating proficiency in:
+#### Practice using the Sakila database, a movie rental system simulation, and demonstrate SQL proficiency:
+
 - Basic queries: *SELECT*, *UPDATE*, *DELETE*, *INSERT*.
 - *GROUP BY*, *WHERE*, and *HAVING* clauses.
 - Use of *JOINS* (including *UNION* and *UNION ALL*).
@@ -46,10 +50,15 @@ Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web an
 - Correlated subqueries.
 
 ## 2. Getting Started
-        .
+1. Load the *Sakila* database.
+2. Run the queries in MySQL Workbench or any compatible SQL client.
 
-## 3. Database Schema
-        .
+## 3. Sakila Database Entity-Relationship Diagram
+![Sakila EER Diagram][def]
+
 
 ## 4. Authorship and Licenses
         .
+
+
+[def]: images/sakila_diagram.svg
