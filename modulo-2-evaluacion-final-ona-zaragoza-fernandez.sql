@@ -6,7 +6,7 @@ SELECT DISTINCT title
 	FROM film;
 
 /* 2. Muestra los nombres de todas las películas que tengan una clasificación de "PG-13".*/
-SELECT title AS 'film', rating
+SELECT title AS 'film', rating AS 'classified as'
 	FROM film
     WHERE rating = 'PG-13';
 
@@ -16,7 +16,7 @@ SELECT title AS 'film', description
     WHERE description LIKE '%amazing%';
     
 /* 4. Encuentra el título de todas las películas que tengan una duración mayor a 120 minutos.*/
-SELECT title AS 'film', length
+SELECT title AS 'film', length AS 'min.'
 	FROM film
     WHERE length >= 120
     ORDER BY length ASC;
@@ -43,13 +43,13 @@ SELECT CONCAT(first_name, ' ', last_name) AS 'actor name', actor_id
     
 /* 8. Encuentra el título de las películas en la tabla film que no sean ni "R" ni "PG-13" en cuanto a su
 clasificación.*/
-SELECT title AS 'film', rating
+SELECT title AS 'film', rating AS 'classified as'
 	FROM film
     WHERE rating NOT IN ('R', 'PG-13');
     
 /* 9. Encuentra la cantidad total de películas en cada clasificación de la tabla film y muestra la
 clasificación junto con el recuento*/
-SELECT rating, COUNT(*) AS 'total'
+SELECT rating AS 'classified as', COUNT(*) AS 'total'
 	FROM film
     GROUP BY rating;
 
@@ -83,7 +83,7 @@ SELECT c.name AS 'category', COUNT(r.rental_id) AS 'total rentals'
             
 /* 12. Encuentra el promedio de duración de las películas para cada clasificación de la tabla film y
 muestra la clasificación junto con el promedio de duración. */
-SELECT rating AS 'classified as', ROUND(AVG(length)) AS 'average lenght'
+SELECT rating AS 'classified as', ROUND(AVG(length)) AS 'average min.'
 	FROM film
     GROUP by rating;
     
@@ -140,23 +140,59 @@ SELECT f.title AS film, c.name
 		/* ---- ... ---- */
         
 /*18. Muestra el nombre y apellido de los actores que aparecen en más de 10 películas.*/
-	SELECT 
+	SELECT CONCAT(a.first_name, ' ', a.last_name) AS 'actor name', COUNT(film_actor.film_id) AS '# films'
+		FROM actor AS a
+        JOIN film_actor
+			ON a.actor_id = film_actor.actor_id
+		GROUP BY a.actor_id, a.first_name, a.last_name
+        HAVING COUNT(film_actor.film_id) >= 10;
+    
+    /* ---- usamos HAVING en lugar de WHERE porque queremos FILTRAR después de agrupar + contar ---- */
     
 /* 19. Encuentra el título de todas las películas que son "R" y tienen una duración mayor a 2 horas en la
 tabla film. */
-
+SELECT title AS 'film', rating AS 'classified as', length AS 'min.'
+	FROM film
+    WHERE rating = 'R' AND length > 120;
 
 /* 20. Encuentra las categorías de películas que tienen un promedio de duración superior a 120 minutos y
 muestra el nombre de la categoría junto con el promedio de duración. */
+SELECT c.name AS 'category', ROUND(AVG(f.length)) AS 'average min.'
+	FROM category AS c
+    JOIN film_category 
+		ON c.category_id = film_category.category_id
+	JOIN film AS f
+		ON film_category.film_id = f.film_id
+	GROUP BY c.name
+    HAVING AVG(f.length) > 120;
 
+		/* ---- ¿podríamos haber usado una subconsulta? sí, pero no es lo más óptimo. ---- */
 
 /* 21. Encuentra los actores que han actuado en al menos 5 películas y muestra el nombre del actor junto
 con la cantidad de películas en las que han actuado. */
-
+SELECT CONCAT(a.first_name, ' ', a.last_name) AS 'actor name', COUNT(film_actor.film_id) AS '# films'
+		FROM actor AS a
+        JOIN film_actor
+			ON a.actor_id = film_actor.actor_id
+		GROUP BY a.actor_id, a.first_name, a.last_name
+        HAVING COUNT(film_actor.film_id) >= 5;
 
 /* 22. Encuentra el título de todas las películas que fueron alquiladas por más de 5 días. Utiliza una
 subconsulta para encontrar los rental_ids con una duración superior a 5 días y luego selecciona las
 películas correspondientes. */
+SELECT DISTINCT f.title AS 'film', DATEDIFF(r.return_date, r.rental_date) AS 'days on rent'
+	FROM film AS f
+    JOIN inventory AS i
+		ON f.film_id = i.film_id
+	JOIN rental AS r
+		ON i.inventory_id = r.inventory_id
+	WHERE
+		r.rental_id IN(SELECT rental_id
+	_						FROM rental
+							WHERE DATEDIFF(return_date, rental_date) > 5);
+
+			/* ---- elegimos DISTINCT para no obtener resultados repetidos para una misma película,
+					sino -a criterio personal- evitar la reiteración de la duración de los alquileres*/
 
 
 /* 23. Encuentra el nombre y apellido de los actores que no han actuado en ninguna película de la categoría
