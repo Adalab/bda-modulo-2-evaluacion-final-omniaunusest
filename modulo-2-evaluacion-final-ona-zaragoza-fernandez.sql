@@ -96,7 +96,7 @@ SELECT CONCAT(a.first_name, ' ', a.last_name) AS 'actor name', f.title AS film
 		ON a.actor_id = film_actor.actor_id
 	JOIN film AS f
 		ON film_actor.film_id = f.film_id
-	WHERE f.title LIKE '%Indian Love%';
+	WHERE f.title = 'Indian Love';
     
 		/* ---- podríamos haber usado
 				WHERE f.title = 'Indian Love'
@@ -187,8 +187,8 @@ SELECT DISTINCT f.title AS 'film', DATEDIFF(r.return_date, r.rental_date) AS 'da
 	JOIN rental AS r
 		ON i.inventory_id = r.inventory_id
 	WHERE
-		r.rental_id IN(SELECT rental_id
-	_						FROM rental
+		r.rental_id IN (SELECT rental_id
+							FROM rental
 							WHERE DATEDIFF(return_date, rental_date) > 5);
 
 			/* ---- elegimos DISTINCT para no obtener resultados repetidos para una misma película,
@@ -197,11 +197,25 @@ SELECT DISTINCT f.title AS 'film', DATEDIFF(r.return_date, r.rental_date) AS 'da
 /* 23. Encuentra el nombre y apellido de los actores que no han actuado en ninguna película de la categoría
 "Horror". Utiliza una subconsulta para encontrar los actores que han actuado en películas de la
 categoría "Horror" y luego exclúyelos de la lista de actores. */
-
+SELECT CONCAT(a.first_name, ' ', a.last_name) AS 'actor name', 'Not in Horror' AS 'genre'
+	FROM actor AS a
+    WHERE a.actor_id NOT IN (SELECT DISTINCT film_actor.actor_id
+								FROM film_actor
+                                JOIN film_category
+									ON film_actor.film_id = film_category.film_id
+								JOIN category AS c
+									ON film_category.category_id = c.category_id
+								WHERE c.name = 'Horror');
 
 /* 24. Encuentra el título de las películas que son comedias y tienen una duración mayor a 180 minutos en
 la tabla film. */
-
+SELECT f.title AS 'film', c.name AS 'genre', f.length AS 'min.'
+	FROM film AS f
+    JOIN film_category
+		ON f.film_id = film_category.film_id
+	JOIN category AS c
+		ON film_category.category_id = c.category_id
+	WHERE c.name = 'comedy' AND f.length > 180;
 
 			/*(((((( B O N U S )))))) 
             
