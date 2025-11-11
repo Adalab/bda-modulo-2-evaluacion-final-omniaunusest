@@ -14,20 +14,33 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
 
 #### Practicar con la base de datos Sakila, que simula un sistema de alquiler de películas, y demostrar dominio en el uso de SQL:
 
-- Queries básicas: *SELECT*; *UPDATE*; *DELETE*; *INSERT*.    
-- Funciones *GROUP BY*, *WHERE* y *HAVING*.  
-- *JOINS* (incluyendo *UNION* y *UNION ALL*)       
+- Queries básicas: ```SELECT```, ```UPDATE```, ```DELETE```, ```INSERT```.
+- Funciones ```GROUP BY```, ```WHERE``` y ```HAVING```.  
+- ```JOINS``` (incluyendo ```UNION``` y ```UNION ALL```)       
 - Subconsultas.         
 - Subconsultas correlacionadas.
 
 ## 2. Uso
 1. Descarga los scripts oficiales para cargar la base de datos Sakila:
-   - [sakila-schema.sql | sakila-data.sql | sakila.mwb](https://downloads.mysql.com/docs/sakila-db.zip)
+   - [sakila-schema.sql | sakila-data.sql | sakila.mwb (zip)](https://downloads.mysql.com/docs/sakila-db.zip)
 
 2. Ejecutar las consultas en MySQL Workbench o cualquier cliente SQL compatible.
+#
+*Ejemplo de query básica*:
+
+```sql
+--- Obtener títulos de películas estrenadas entre 2006 y 2010
+SELECT title
+FROM film
+WHERE release_year BETWEEN 2006 AND 2010;
+```
+**Explicación:**
+Esta consulta selecciona el título de todas las películas de la tabla `film` cuyo año de estreno (`release_year`) está entre 2006 y 2010 (inclusive).
+
 
 ## 3. Estructura de este repositorio
         bda-modulo-2-evaluacion-final-omniaunusest/
+        ├── modulo-2-evaluacion-final.sql
         ├── README.md
         ├── database-assets/
                 └── sakila_er_diagram.svg
@@ -38,7 +51,7 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
 ![Diagrama EER de Sakila][def]
 
 ## 4. Autoría y licencias
-Este proyecto ha sido desarrollado por **[Ona Zaragoza Fernández](https://www.linkedin.com/in/a-ona-zeta/)** como parte de la evaluación técnica relativa a SQL.
+Este proyecto ha sido desarrollado por **[Ana Mariona (Ona) Zaragoza Fernández](https://www.linkedin.com/in/a-ona-zeta/)** como parte de la evaluación técnica relativa a SQL.
 
 GitHub: [@omniaunusest](https://github.com/omniaunusest)
 
@@ -56,21 +69,32 @@ Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web an
 ## 1. Project Goals
 #### Practice using the Sakila database, a movie rental system simulation, and demonstrate SQL proficiency:
 
-- Basic queries: *SELECT*, *UPDATE*, *DELETE*, *INSERT*.
-- *GROUP BY*, *WHERE*, and *HAVING* clauses.
-- Use of *JOINS* (including *UNION* and *UNION ALL*).
+- Basic queries: ```SELECT```, ```UPDATE```, ```DELETE```, ```INSERT```.
+- ```GROUP BY```, ```WHERE```, and ```HAVING``` clauses.
+- Use of ```JOINS``` (including ```UNION``` and ```UNION ALL```).
 - Subqueries.
 - Correlated subqueries.
 
 ## 2. Getting Started
 
 1. Download the official scripts to set up the Sakila database:
-   - [sakila-schema.sql | sakila-data.sql | sakila.mwb](https://downloads.mysql.com/docs/sakila-db.zip)
+   - [sakila-schema.sql | sakila-data.sql | sakila.mwb (zip)](https://downloads.mysql.com/docs/sakila-db.zip)
 
 2. Run the queries in MySQL Workbench or any compatible SQL client.
+#
+*Basic query example*:
+```sql
+-- Get titles of films released between 2006 and 2010
+SELECT title
+FROM film
+WHERE release_year BETWEEN 2006 AND 2010;
+```
+**Explained:**
+This query selects the titles of all films from the ```film``` table where the release year (```release_year```) is between 2006 and 2010 (inclusive).
 
 ## 4. Repository Structure
-        bda-modulo-2-evaluacion-final-omniaunusest/
+       bda-modulo-2-evaluacion-final-omniaunusest/
+        ├── modulo-2-evaluacion-final.sql
         ├── README.md
         ├── database-assets/
                 └── sakila_er_diagram.svg
@@ -80,7 +104,7 @@ Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web an
 
 
 ## 5. Authorship and Licenses
-This project has been developed by **[Ona Zaragoza Fernández](https://www.linkedin.com/in/a-ona-zeta/)** as part of the SQL technical assessment.       
+This project has been developed by **[Ana Mariona (Ona) Zaragoza Fernández](https://www.linkedin.com/in/a-ona-zeta/)** as part of the SQL technical assessment.       
 
 GitHub: [@omniaunusest](https://github.com/omniaunusest)
 
