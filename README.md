@@ -5,8 +5,9 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
 
 [1. Propósito](#1-propósito)    
 [2. Uso](#2-uso)    
-[3. Diagrama Entidad-Relación de la base de datos Sakila](#3-diagrama-entidad-relación-de-la-base-de-datos-sakila)      
-[4. Autoría y licencias](#4-autoría-y-licencias)
+[3. Estructura de este repositorio](#3-estructura-de-este-repositorio)  
+[4. Diagrama Entidad-Relación de la base de datos Sakila](#4-diagrama-entidad-relación-de-la-base-de-datos-sakila)      
+[5. Autoría y licencias](#5-autoría-y-licencias)
 #### ➥ (see English version [below](#index))
 #
 ## 1. Propósito
@@ -24,12 +25,22 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
 
 2. Ejecutar las consultas en MySQL Workbench o cualquier cliente SQL compatible.
 
+## 3. Estructura de este repositorio
+        bda-modulo-2-evaluacion-final-omniaunusest/
+        ├── README.md
+        ├── database-assets/
+                └── sakila_schema.sql
+                └── sakila_er_diagram.svg
+
+
 ## 3. Diagrama Entidad-Relación de la base de datos Sakila
 
 ![Diagrama EER de Sakila][def]
 
 ## 4. Autoría y licencias
-        .
+Este proyecto ha sido desarrollado por **[Ona Zaragoza Fernández](https://www.linkedin.com/in/a-ona-zeta/)** como parte de la evaluación técnica relativa a SQL.
+
+GitHub: [@omniaunusest](https://github.com/omniaunusest)
 
 ## SQL: Queries within an Educational Project Framework
 Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web and Database Information Extraction*), full-time program by *Adalab*.
@@ -37,8 +48,9 @@ Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web an
 ## Index
 [1. Project Goals](#1-project-goals)  
 [2. Getting Started](#2-getting-started)     
-[3. Sakila Database Entity-Relationship Diagram](#3-sakila-database-entity-relationship-diagram)    
-[4. Authorship and Licenses](#4-authorship-and-licenses)    
+[3. Repository Structure](#3-repository-structure)      
+[4. Sakila Database Entity-Relationship Diagram](#4-sakila-database-entity-relationship-diagram)    
+[5. Authorship and Licenses](#5-authorship-and-licenses)    
 
 ## 1. Project Goals
 #### Practice using the Sakila database, a movie rental system simulation, and demonstrate SQL proficiency:
@@ -53,12 +65,21 @@ Assessment exercises for the **Data Analytics & AI** Bootcamp (Module 2: *Web an
 1. Load the *Sakila* database.
 2. Run the queries in MySQL Workbench or any compatible SQL client.
 
-## 3. Sakila Database Entity-Relationship Diagram
+## 4. Repository Structure
+        bda-modulo-2-evaluacion-final-omniaunusest/
+        ├── README.md
+        ├── database-assets/
+                └── sakila_schema.sql
+                └── sakila_er_diagram.svg
+
+## 4. Sakila Database Entity-Relationship Diagram
 ![Sakila EER Diagram][def]
 
 
-## 4. Authorship and Licenses
-        .
+## 5. Authorship and Licenses
+This project has been developed by **[Ona Zaragoza Fernández](https://www.linkedin.com/in/a-ona-zeta/)** as part of the SQL technical assessment.       
+
+GitHub: [@omniaunusest](https://github.com/omniaunusest)
 
 
-[def]: images/sakila_diagram.svg
+[def]: database-assets/sakila_er_diagram.svg
