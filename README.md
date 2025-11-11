@@ -21,7 +21,8 @@ Ejercicios de evaluación del Bootcamp **Data Analytics e IA** (Módulo 2: *Extr
 - Subconsultas correlacionadas.
 
 ## 2. Uso
-1. Cargar base de datos *Sakila*.
+1. Cargar base de datos *Sakila*.       
+*sakila_schema.sql*
 
 2. Ejecutar las consultas en MySQL Workbench o cualquier cliente SQL compatible.
 
